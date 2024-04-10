@@ -1,0 +1,23 @@
+SELECT employees.name, employees.employee_id, departments.department_name
+FROM employees
+JOIN departments
+ON employees.department_id = departments.department_id;
+-------------------------------------------------------------------------------------------------------------------
+
+Line-by-Line Explanation:
+SELECT Clause:
+
+SELECT employees.name, departments.department_name
+This line specifies what columns you want to include in your result set. It's asking for the name column from the employees table and the department_name column from the departments table.
+FROM Clause:
+
+FROM employees
+This line specifies the starting table for the query. The data retrieval process begins with the employees table.
+INNER JOIN Clause:
+
+INNER JOIN departments
+This line tells SQL to perform an inner join operation with the departments table. An inner join fetches rows from both tables that meet the joining condition specified in the ON clause.
+ON Clause:
+
+ON employees.department_id = departments.department_id;
+This line specifies the condition for the join. It matches rows where the department_id column in employees is equal to the department_id column in departments. Only rows that meet this condition are included in the final result.
